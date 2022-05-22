@@ -11,7 +11,7 @@ function App() {
         <div className="Footer mt-3 mb-3 p-1">
           <footer>
             <a
-              href="https://github.com/corinamittelholzer/Weatherapp"
+              href="https://github.com/corinamittelholzer/weather-react"
               target="_blank"
               rel="noreferrer"
             >
