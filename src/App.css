@@ -1,38 +1,132 @@
-.App {
+footer {
+  background: white;
+  font-size: 15px;
   text-align: center;
+  color: dimgrey;
+  border-radius: 0.25rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  width: 100%;
+  height: 100%;
+  display: table;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  display: table-cell;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+/* Thunderstorm */
+.background11d {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(110, 112, 129) 0%,
+    rgb(41, 58, 75) 81.3%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* broken clouds */
+.background04d {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+/* snow */
+.background13d {
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+/* nebel */
+.background50d {
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+}
+
+/* scattered clouds, bisschen bewölkt*/
+.background03d {
+  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+}
+
+/* few clouds, Sonne und Wolken*/
+.background02d {
+  background: linear-gradient(70deg, #8595bb 0%, #e4efe9 100%);
+}
+
+/* shower rain, rain*/
+.background09d {
+  background: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
+/* sunny */
+.background01d {
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+}
+
+/* sun and rain */
+.background10d {
+  background: linear-gradient(
+    99.6deg,
+    rgb(112, 128, 152) 10.6%,
+    rgb(242, 227, 234) 32.9%,
+    rgb(234, 202, 213) 52.7%,
+    rgb(220, 227, 239) 72.8%,
+    rgb(185, 205, 227) 81.1%,
+    rgb(154, 180, 212) 102.4%
+  );
+}
+
+/* night */
+.background01n,
+.background02n,
+.background03n,
+.background04n,
+.background09n,
+.background10n,
+.background50n,
+.background11n,
+.background13n {
+  background: linear-gradient(to right, #232526, #414345);
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+h2 {
+  font-size: 30px;
+  color: dimgrey;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.temperature-forecast {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.temperature-min {
+  opacity: 0.7;
+}
+
+.icon {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: dimgrey;
 }

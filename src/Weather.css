@@ -1,0 +1,68 @@
+.current-button {
+  background-color: rgb(143, 188, 143);
+  border-color: rgb(143, 188, 143);
+}
+
+.current-button:hover {
+  background-color: rgb(105, 139, 105);
+  border-color: rgb(105, 139, 105);
+}
+
+.search-button {
+  background-color: rgb(240, 128, 128);
+  border-color: rgb(240, 128, 128);
+}
+
+.search-button:hover {
+  background-color: rgb(182, 97, 97);
+  border-color: rgb(182, 97, 97);
+}
+
+.card-body {
+  color: dimgrey;
+  text-align: center;
+}
+
+.card-body.info {
+  text-align: left;
+  font-size: 25px;
+}
+
+.current-weather-description {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.current-weather-description:first-letter {
+  text-transform: capitalize;
+}
+
+.current-icon {
+  width: 175px;
+  margin: -35px auto -5px;
+}
+
+.current-temperature {
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.units {
+  font-size: 20px;
+  position: relative;
+  top: -25px;
+  color: dimgrey;
+}
+
+.change-unit {
+  text-decoration: none;
+  color: dimgrey;
+}
+
+.change-unit.active {
+  color: black;
+  font-weight: bold;
+  cursor: default;
+}
