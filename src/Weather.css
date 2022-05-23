@@ -1,49 +1,60 @@
-.current-button {
+.Weather h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: black;
+}
+
+.Weather h2 {
+  font-size: 30px;
+  color: dimgrey;
+}
+
+.Weather .current-button {
   background-color: rgb(143, 188, 143);
   border-color: rgb(143, 188, 143);
 }
 
-.current-button:hover {
+.Weather .current-button:hover {
   background-color: rgb(105, 139, 105);
   border-color: rgb(105, 139, 105);
 }
 
-.search-button {
+.Weather .search-button {
   background-color: rgb(240, 128, 128);
   border-color: rgb(240, 128, 128);
 }
 
-.search-button:hover {
+.Weather .search-button:hover {
   background-color: rgb(182, 97, 97);
   border-color: rgb(182, 97, 97);
 }
 
-.card-body {
+.Weather .card-body {
   color: dimgrey;
   text-align: center;
 }
 
-.card-body.info {
+.Weather .card-body.info {
   text-align: left;
   font-size: 25px;
 }
 
-.current-weather-description {
+.Weather .current-weather-description {
   color: black;
-  font-size: 30px;
   font-weight: bold;
+  font-size: 30px;
 }
 
-.current-weather-description:first-letter {
+.Weather .current-weather-description:first-letter {
   text-transform: capitalize;
 }
 
-.current-icon {
+.Weather .current-icon {
   width: 175px;
   margin: -35px auto -5px;
 }
 
-.current-temperature {
+.Weather .current-temperature {
   color: black;
   font-size: 40px;
   font-weight: bold;
@@ -65,4 +76,18 @@
   color: black;
   font-weight: bold;
   cursor: default;
+}
+
+.Weather .temperature-forecast {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.Weather .temperature-min {
+  opacity: 0.7;
+}
+
+.Weather .icon {
+  width: 70px;
+  margin-bottom: 10px;
 }

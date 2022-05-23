@@ -19,16 +19,17 @@ export default function Weather() {
         <div className="row mt-3">
           <div className="col-6">
             <input
-              type="text"
+              type="search"
               className="form-control form-control-lg"
               placeholder="Enter city name"
-              id="cityname-input"
               autoComplete="off"
+              autoFocus="on"
             />
           </div>
           <div className="col-3 d-grid">
             <button
               type="submit"
+              value="search"
               className="search-button btn btn-danger btn-lg"
             >
               Search
@@ -37,6 +38,7 @@ export default function Weather() {
           <div className="col-3 d-grid">
             <button
               type="submit"
+              value="search"
               className="current-button btn btn-success btn-lg"
             >
               Current
