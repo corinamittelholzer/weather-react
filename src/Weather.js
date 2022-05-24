@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "./Weather.css";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 
-export default function Weather() {
+export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
-    console.log(response.data);
-
     setWeatherData({
       temperature: response.data.main.temp,
       city: response.data.name,
@@ -55,53 +53,12 @@ export default function Weather() {
             </div>
           </div>
         </form>
-        <div className="card mt-3 mb-3">
-          <div className="row">
-            <div className="col-5">
-              <div className="card-body info">
-                <h1>{weatherData.city}</h1>
-                <FormattedDate date={weatherData.date} />
-                <p className="card-text">
-                  <br />
-                  <span>Humidity: {weatherData.humidity} %</span>
-                  <br />
-                  <span>Wind: {weatherData.windspeed} Km/h</span>
-                </p>
-              </div>
-            </div>
-            <div className="col-7">
-              <div className="card-body">
-                <p className="current-weather-description">
-                  {weatherData.description}
-                </p>
-                <img
-                  className="current-icon"
-                  src={weatherData.imgSrc}
-                  alt={weatherData.description}
-                />
-                <p className="temperature">
-                  <span className="current-temperature">
-                    {Math.round(weatherData.temperature)}
-                  </span>
-                  <span className="units">
-                    <a href="/" className="change-unit active">
-                      °C{" "}
-                    </a>
-                    |
-                    <a href="/" className="change-unit">
-                      °F
-                    </a>
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo info={weatherData} />
       </div>
     );
   } else {
     const apiKey = "833c266388856a77756df0737bbad0be";
-    let city = "Porto";
+    let city = props.defaultCity;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
