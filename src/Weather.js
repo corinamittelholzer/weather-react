@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
-import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -17,12 +16,12 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       windspeed: response.data.wind.speed,
       description: response.data.weather[0].description,
-      imgSrc: "/images/02d.svg",
+      imgSrc: `/images/${response.data.weather[0].icon}.svg`,
     });
     setReady(true);
   }
 
-  function search(response) {
+  function search() {
     const apiKey = "833c266388856a77756df0737bbad0be";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
