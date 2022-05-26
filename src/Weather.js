@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
+import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
   const [weatherData, setWeatherData] = useState({});
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -19,10 +21,26 @@ export default function Weather(props) {
     });
     setReady(true);
   }
+
+  function search(response) {
+    const apiKey = "833c266388856a77756df0737bbad0be";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (ready) {
     return (
       <div className="Weather">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row mt-3">
             <div className="col-6">
               <input
@@ -31,6 +49,7 @@ export default function Weather(props) {
                 placeholder="Enter city name"
                 autoComplete="off"
                 autoFocus="on"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-3 d-grid">
@@ -57,11 +76,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "833c266388856a77756df0737bbad0be";
-    let city = props.defaultCity;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return <p>"Loading..."</p>;
   }
 }
