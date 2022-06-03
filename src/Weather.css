@@ -9,16 +9,6 @@
   color: dimgrey;
 }
 
-.Weather .current-button {
-  background-color: rgb(143, 188, 143);
-  border-color: rgb(143, 188, 143);
-}
-
-.Weather .current-button:hover {
-  background-color: rgb(105, 139, 105);
-  border-color: rgb(105, 139, 105);
-}
-
 .Weather .search-button {
   background-color: rgb(240, 128, 128);
   border-color: rgb(240, 128, 128);

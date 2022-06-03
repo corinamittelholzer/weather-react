@@ -1,0 +1,17 @@
+.WeatherForecast .Forecast-day {
+  text-align: center;
+}
+
+.WeatherForecast .Forecast-icon {
+  max-width: 80px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.WeatherForecast .ForecastTemperature {
+  text-align: center;
+}
+
+.WeatherForecast .ForecastTemperature-min {
+  opacity: 0.6;
+}

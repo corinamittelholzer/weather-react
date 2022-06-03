@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
+
 import axios from "axios";
 
 export default function Weather(props) {
@@ -9,6 +10,7 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       temperature: response.data.main.temp,
       city: response.data.name,
@@ -17,6 +19,7 @@ export default function Weather(props) {
       windspeed: response.data.wind.speed,
       description: response.data.weather[0].description,
       imgSrc: `/images/${response.data.weather[0].icon}.svg`,
+      coord: response.data.coord,
     });
     setReady(true);
   }
@@ -41,7 +44,7 @@ export default function Weather(props) {
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row mt-3">
-            <div className="col-6">
+            <div className="col-8">
               <input
                 type="search"
                 className="form-control form-control-lg"
@@ -51,22 +54,13 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3 d-grid">
+            <div className="col-4 d-grid">
               <button
                 type="submit"
                 value="search"
                 className="search-button btn btn-danger btn-lg"
               >
                 Search
-              </button>
-            </div>
-            <div className="col-3 d-grid">
-              <button
-                type="submit"
-                value="search"
-                className="current-button btn btn-success btn-lg"
-              >
-                Current
               </button>
             </div>
           </div>
