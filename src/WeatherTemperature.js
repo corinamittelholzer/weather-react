@@ -38,11 +38,20 @@ export default function WeatherTemperature(props) {
         <p className="temperature">
           <span className="current-temperature">{Math.round(fahrenheit)}</span>
           <span className="units">
-            <a href="/" onClick={convertToCelsius} className="change-unit">
+            <a
+              href="/"
+              onClick={convertToCelsius}
+              className="change-unit"
+              title="change to celsius"
+            >
               °C{" "}
             </a>
             |
-            <a href="/" className="change-unit active">
+            <a
+              href="/"
+              className="change-unit active"
+              title="change to fahrenheit"
+            >
               °F
             </a>
           </span>
