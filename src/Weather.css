@@ -50,31 +50,22 @@
   font-weight: bold;
 }
 
-.units {
+.Weather .units {
   font-size: 20px;
   position: relative;
   top: -25px;
   color: dimgrey;
 }
 
-.change-unit {
+.Weather .change-unit {
   text-decoration: none;
   color: dimgrey;
 }
 
-.change-unit.active {
+.Weather .change-unit.active {
   color: black;
   font-weight: bold;
   cursor: default;
-}
-
-.Weather .temperature-forecast {
-  font-size: 18px;
-  margin-bottom: 0;
-}
-
-.Weather .temperature-min {
-  opacity: 0.7;
 }
 
 .Weather .icon {
