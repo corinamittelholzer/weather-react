@@ -8,7 +8,7 @@ export default function WeatherInfo(props) {
     <div className="WeatherInfo">
       <div className="card mt-3 mb-3 pb-4 pt-2">
         <div className="row">
-          <div className="col-6">
+          <div className="col-7 col-sm-6">
             <div className="card-body info">
               <h1>{props.info.city}</h1>
               <FormattedDate date={props.info.date} />
@@ -20,7 +20,7 @@ export default function WeatherInfo(props) {
               </p>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-5 col-sm-6">
             <div className="card-body">
               <p className="current-weather-description">
                 {props.info.description}

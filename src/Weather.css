@@ -1,5 +1,5 @@
 .Weather h1 {
-  font-size: 55px;
+  font-size: 38px;
   font-weight: bold;
   color: black;
 }
@@ -46,7 +46,7 @@
 
 .Weather .current-temperature {
   color: black;
-  font-size: 40px;
+  font-size: 33px;
   font-weight: bold;
 }
 
@@ -71,4 +71,30 @@
 .Weather .icon {
   width: 70px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 567px) {
+  .Weather h1 {
+    font-size: 25px;
+  }
+  .Weather h2 {
+    font-size: 22px;
+  }
+  .Weather .card-body.info {
+    font-size: 18px;
+  }
+  .Weather .current-weather-description {
+    font-size: 20px;
+  }
+  .Weather .current-icon {
+    width: 130px;
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+  .Weather .current-temperature {
+    font-size: 22px;
+  }
+  .Weather .units {
+    font-size: 15px;
+  }
 }
